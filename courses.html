@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Right Course for Your Career Abroad | Study O'Clock</title>
+    <meta name="description" content="Explore popular courses and fields of study for Indian students abroad including Engineering, Business, IT, Healthcare, and Arts. Find the perfect program for your career.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ======================= Header ======================= -->
+    <header class="main-header">
+        <a href="index.html" class="logo-container">
+            <img src="StudyOClock.jpg" alt="Study O'Clock Logo">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="countries.html">Countries</a></li>
+                <li class="active"><a href="courses.html">Courses</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="free_education.html">Free Education</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================= Courses Section ======================= -->
+        <section class="container">
+            <h1 style="text-align: center;">Find the Right Course for Your Career Abroad</h1>
+            <p style="font-size: 1.2rem; text-align: center; margin: 20px auto 40px; max-width: 600px;">Choosing the right course is the most critical step. Explore popular fields of study and find the best countries that align with your career goals. Whether you're looking for an MBA in the UK or a Master's in Computer Science in Canada, our counsellors in Kochi can help you find the perfect program.</p>
+            
+            <!-- Filter Buttons -->
+            <div style="text-align: center; margin: 40px 0;">
+                <button class="btn btn-secondary filter-btn active" data-category="all" style="margin: 5px;">All Courses</button>
+                <button class="btn btn-secondary filter-btn" data-category="engineering" style="margin: 5px;">Engineering</button>
+                <button class="btn btn-secondary filter-btn" data-category="business" style="margin: 5px;">Business</button>
+                <button class="btn btn-secondary filter-btn" data-category="it" style="margin: 5px;">IT</button>
+                <button class="btn btn-secondary filter-btn" data-category="healthcare" style="margin: 5px;">Healthcare</button>
+                <button class="btn btn-secondary filter-btn" data-category="arts" style="margin: 5px;">Arts</button>
+            </div>
+
+            <!-- Course Categories -->
+            <div id="course-content">
+                
+                <!-- Business & Management -->
+                <div class="course-category" data-category="business">
+                    <h2>Business & Management</h2>
+                    <div style="background-color: var(--off-white); padding: 30px; border-radius: 12px; margin-bottom: 40px;">
+                        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start;">
+                            <div>
+                                <h4 style="color: var(--primary-red); margin-bottom: 15px;">Popular Courses:</h4>
+                                <ul style="columns: 2; column-gap: 30px; margin-bottom: 20px;">
+                                    <li>Master of Business Administration (MBA)</li>
+                                    <li>MS in Finance</li>
+                                    <li>MS in Marketing</li>
+                                    <li>MS in International Business</li>
+                                    <li>MS in Supply Chain Management</li>
+                                    <li>MS in Project Management</li>
+                                    <li>MS in Human Resource Management</li>
+                                    <li>MS in Entrepreneurship</li>
+                                </ul>
+                                <p><strong>Career Prospects:</strong> Management Consultant, Financial Analyst, Marketing Manager, Business Development Manager, Operations Manager, Product Manager</p>
+                                <p><strong>Average Salary Range:</strong> $50,000 - $120,000+ annually</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-red); margin-bottom: 15px;">Best Countries:</h4>
+                                <div style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇬🇧 UK</strong><br>
+                                        <small>1-year MBA programs, strong finance sector</small>
+                                    </div>
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇺🇸 USA</strong><br>
+                                        <small>Top business schools, networking opportunities</small>
+                                    </div>
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇦🇺 Australia</strong><br>
+                                        <small>Strong economy, post-study work rights</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering & Technology -->
+                <div class="course-category" data-category="engineering">
+                    <h2>Engineering & Technology</h2>
+                    <div style="background-color: var(--off-white); padding: 30px; border-radius: 12px; margin-bottom: 40px;">
+                        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start;">
+                            <div>
+                                <h4 style="color: var(--primary-red); margin-bottom: 15px;">Popular Courses:</h4>
+                                <ul style="columns: 2; column-gap: 30px; margin-bottom: 20px;">
+                                    <li>MS in Computer Science</li>
+                                    <li>MS in Software Engineering</li>
+                                    <li>MS in Mechanical Engineering</li>
+                                    <li>MS in Electrical Engineering</li>
+                                    <li>MS in Civil Engineering</li>
+                                    <li>MS in Aerospace Engineering</li>
+                                    <li>MS in Chemical Engineering</li>
+                                    <li>MS in Biomedical Engineering</li>
+                                </ul>
+                                <p><strong>Career Prospects:</strong> Software Engineer, Data Scientist, Mechanical Engineer, Research Scientist, Product Engineer, Systems Analyst</p>
+                                <p><strong>Average Salary Range:</strong> $60,000 - $130,000+ annually</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-red); margin-bottom: 15px;">Best Countries:</h4>
+                                <div style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇩🇪 Germany</strong><br>
+                                        <small>Engineering excellence, low tuition costs</small>
+                                    </div>
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇨🇦 Canada</strong><br>
+                                        <small>Strong tech industry, immigration pathways</small>
+                                    </div>
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇺🇸 USA</strong><br>
+                                        <small>Top tech companies, research opportunities</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Information Technology -->
+                <div class="course-category" data-category="it">
+                    <h2>Information Technology & Computer Science</h2>
+                    <div style="background-color: var(--off-white); padding: 30px; border-radius: 12px; margin-bottom: 40px;">
+                        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start;">
+                            <div>
+                                <h4 style="color: var(--primary-red); margin-bottom: 15px;">Popular Courses:</h4>
+                                <ul style="columns: 2; column-gap: 30px; margin-bottom: 20px;">
+                                    <li>MS in Data Science</li>
+                                    <li>MS in Artificial Intelligence</li>
+                                    <li>MS in Cybersecurity</li>
+                                    <li>MS in Information Systems</li>
+                                    <li>MS in Machine Learning</li>
+                                    <li>MS in Cloud Computing</li>
+                                    <li>MS in Web Development</li>
+                                    <li>MS in Digital Marketing</li>
+                                </ul>
+                                <p><strong>Career Prospects:</strong> Data Scientist, AI Engineer, Cybersecurity Analyst, Cloud Architect, Full Stack Developer, IT Manager</p>
+                                <p><strong>Average Salary Range:</strong> $65,000 - $140,000+ annually</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-red); margin-bottom: 15px;">Best Countries:</h4>
+                                <div style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇺🇸 USA</strong><br>
+                                        <small>Silicon Valley, tech innovation hub</small>
+                                    </div>
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇨🇦 Canada</strong><br>
+                                        <small>Growing tech sector, work opportunities</small>
+                                    </div>
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇦🇺 Australia</strong><br>
+                                        <small>Digital economy growth, skilled migration</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Healthcare & Medicine -->
+                <div class="course-category" data-category="healthcare">
+                    <h2>Healthcare & Medicine</h2>
+                    <div style="background-color: var(--off-white); padding: 30px; border-radius: 12px; margin-bottom: 40px;">
+                        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start;">
+                            <div>
+                                <h4 style="color: var(--primary-red); margin-bottom: 15px;">Popular Courses:</h4>
+                                <ul style="columns: 2; column-gap: 30px; margin-bottom: 20px;">
+                                    <li>MS in Public Health</li>
+                                    <li>MS in Nursing</li>
+                                    <li>MS in Healthcare Management</li>
+                                    <li>MS in Biomedical Sciences</li>
+                                    <li>MS in Pharmacy</li>
+                                    <li>MS in Physical Therapy</li>
+                                    <li>MS in Medical Technology</li>
+                                    <li>MS in Health Informatics</li>
+                                </ul>
+                                <p><strong>Career Prospects:</strong> Healthcare Administrator, Public Health Specialist, Clinical Research Coordinator, Medical Technologist, Nurse Practitioner</p>
+                                <p><strong>Average Salary Range:</strong> $45,000 - $100,000+ annually</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-red); margin-bottom: 15px;">Best Countries:</h4>
+                                <div style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇬🇧 UK</strong><br>
+                                        <small>NHS experience, renowned medical schools</small>
+                                    </div>
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇦🇺 Australia</strong><br>
+                                        <small>High healthcare standards, work opportunities</small>
+                                    </div>
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇨🇦 Canada</strong><br>
+                                        <small>Public healthcare system, research focus</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arts & Humanities -->
+                <div class="course-category" data-category="arts">
+                    <h2>Arts & Humanities</h2>
+                    <div style="background-color: var(--off-white); padding: 30px; border-radius: 12px; margin-bottom: 40px;">
+                        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start;">
+                            <div>
+                                <h4 style="color: var(--primary-red); margin-bottom: 15px;">Popular Courses:</h4>
+                                <ul style="columns: 2; column-gap: 30px; margin-bottom: 20px;">
+                                    <li>MA in International Relations</li>
+                                    <li>MA in Psychology</li>
+                                    <li>MA in Fine Arts</li>
+                                    <li>MA in Media Studies</li>
+                                    <li>MA in Literature</li>
+                                    <li>MA in History</li>
+                                    <li>MA in Linguistics</li>
+                                    <li>MA in Cultural Studies</li>
+                                </ul>
+                                <p><strong>Career Prospects:</strong> Policy Analyst, Counselor, Art Director, Journalist, Museum Curator, Translator, Research Analyst</p>
+                                <p><strong>Average Salary Range:</strong> $35,000 - $80,000+ annually</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-red); margin-bottom: 15px;">Best Countries:</h4>
+                                <div style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇬🇧 UK</strong><br>
+                                        <small>Rich cultural heritage, prestigious universities</small>
+                                    </div>
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇺🇸 USA</strong><br>
+                                        <small>Diverse programs, research opportunities</small>
+                                    </div>
+                                    <div style="background-color: white; padding: 15px; border-radius: 8px; box-shadow: var(--shadow-subtle);">
+                                        <strong>🇩🇪 Germany</strong><br>
+                                        <small>Philosophy & arts tradition, low costs</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= CTA Section ======================= -->
+        <section class="container text-center" style="margin-top: 60px;">
+            <h2>Still Confused About Which Course to Choose?</h2>
+            <p style="font-size: 1.1rem; margin: 20px auto 30px; max-width: 500px;">Our expert counsellors can help you choose the right course based on your background, interests, and career aspirations.</p>
+            <a href="contact.html" class="btn btn-primary" style="margin-right: 20px;">Get Course Guidance</a>
+            <a href="services.html" class="btn btn-secondary">View All Services</a>
+        </section>
+    </main>
+
+    <!-- ======================= Footer ======================= -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Study O'Clock</h4>
+                <p>The Right Guide at the Right Time. Your trusted partner for global education.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us (Kochi Office)</h4>
+                <p>123 Park Avenue, Kochi, Kerala, 682011</p>
+                <p>Email: <a href="mailto:kochi@studyoclock.com">kochi@studyoclock.com</a></p>
+                <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#">Facebook</a> | <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Study O'Clock. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="main.js"></script>
+</body>
+</html>

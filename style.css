@@ -1,0 +1,646 @@
+/* ==========================================================================
+   Study O'Clock - Main Stylesheet
+   
+   Table of Contents:
+   1. ROOT & GLOBAL STYLES - CSS variables, base styles, typography
+   2. HEADER COMPONENT - Navigation, logo, hamburger menu
+   3. FOOTER COMPONENT - Footer layout, links, social icons
+   4. BUTTON COMPONENT - Primary and secondary button styles
+   5. CARD COMPONENTS - Destination cards, testimonial cards
+   6. ACCORDION COMPONENT - FAQ accordion functionality
+   7. COUNTDOWN TIMER COMPONENT - Scholarship countdown display
+   8. HERO SECTION STYLES - Video background, overlay, content
+   9. FEATURES/WHY CHOOSE US SECTION - Feature items layout
+   10. DESTINATIONS SECTION - Grid layout for destination cards
+   11. UTILITY CLASSES - Reusable utility classes
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ROOT & GLOBAL STYLES
+   -------------------------------------------------------------------------- */
+
+/* Define brand colors and fonts as CSS variables for easy maintenance */
+:root {
+    --primary-red: #E62025;
+    --primary-red-darker: #c41a1f;
+    --deep-charcoal: #222222;
+    --professional-gray: #6c757d;
+    --off-white: #F5F5F5;
+    --white: #FFFFFF;
+    --light-gray: #a0a0a0;
+    --border-color: #eeeeee;
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
+
+    --shadow-subtle: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-card: 0 5px 15px rgba(0,0,0,0.08);
+    --shadow-card-hover: 0 8px 20px rgba(0,0,0,0.12);
+    --shadow-button-hover: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Apply base styles to the body */
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--deep-charcoal);
+    background-color: var(--white); /* Main background is white, sections can use off-white */
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Basic styles for headings and paragraphs */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--primary-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-red-darker);
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 25px;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. HEADER COMPONENT
+   -------------------------------------------------------------------------- */
+
+.main-header {
+    background-color: var(--white);
+    box-shadow: var(--shadow-subtle);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .logo-container img {
+    height: 70px; /* Adjust as needed */
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav li {
+    margin-left: 30px;
+}
+
+.main-nav a {
+    color: var(--deep-charcoal);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav li.active a {
+    color: var(--primary-red);
+}
+
+/* Styles for mobile hamburger menu (functionality requires JS) */
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--deep-charcoal);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Hamburger menu animation states (controlled by JavaScript) */
+.hamburger-menu.is-active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.is-active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Add media query for responsive header */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+    
+    .main-nav {
+        display: none; /* Hide nav on mobile */
+    }
+    
+    .hamburger-menu {
+        display: flex; /* Show hamburger icon */
+    }
+    
+    /* Mobile menu when active (controlled by JavaScript) */
+    .main-nav.mobile-active {
+        display: block !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        box-shadow: var(--shadow-card);
+        z-index: 1000;
+    }
+    
+    .main-nav.mobile-active ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .main-nav.mobile-active li {
+        margin: 10px 0;
+        margin-left: 0;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   3. FOOTER COMPONENT
+   -------------------------------------------------------------------------- */
+
+.main-footer {
+    background-color: var(--deep-charcoal);
+    color: var(--off-white);
+    padding: 60px 5%;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-column h4 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.footer-column p, .footer-column li {
+    color: var(--light-gray);
+    font-size: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: var(--light-gray);
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--white);
+}
+
+.social-icons a {
+    margin-right: 15px;
+}
+
+.social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--white);
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons a:hover svg {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--professional-gray);
+    font-size: 14px;
+    color: var(--light-gray);
+}
+
+
+/* --------------------------------------------------------------------------
+   4. BUTTON COMPONENT
+   -------------------------------------------------------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Primary Red Button */
+.btn-primary {
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: 2px solid var(--primary-red);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-red-darker);
+    border-color: var(--primary-red-darker);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-button-hover);
+}
+
+/* Secondary Ghost Button */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--deep-charcoal);
+    border: 2px solid var(--deep-charcoal);
+}
+
+.btn-secondary:hover {
+    background-color: var(--deep-charcoal);
+    color: var(--white);
+}
+
+
+/* --------------------------------------------------------------------------
+   5. CARD COMPONENTS (Destination & Testimonial)
+   -------------------------------------------------------------------------- */
+
+.card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.card-image-container {
+    overflow: hidden; /* Ensures the zoom effect doesn't break the card's border-radius */
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 200px; /* Or use aspect-ratio */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-image-container img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: var(--deep-charcoal); /* Override link color inheritance */
+}
+
+.card-content p {
+    color: var(--deep-charcoal); /* Override link color inheritance */
+}
+
+/* Testimonial specific styles */
+.testimonial-card .card-content {
+    text-align: center;
+}
+.testimonial-card img.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: -65px auto 15px; /* Pulls avatar up onto the card top edge */
+    border: 4px solid var(--white);
+    box-shadow: var(--shadow-subtle);
+}
+.testimonial-card .author {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-top: 15px;
+    color: var(--deep-charcoal);
+}
+
+
+/* --------------------------------------------------------------------------
+   6. ACCORDION COMPONENT (for FAQ)
+   -------------------------------------------------------------------------- */
+
+.accordion-item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-header {
+    background-color: var(--white);
+    padding: 18px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.accordion-icon {
+    font-size: 24px;
+    font-weight: 300;
+    transition: transform 0.4s ease;
+}
+
+.accordion-panel {
+    background-color: var(--off-white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.accordion-panel-content {
+    padding: 20px;
+}
+
+/* State when accordion item is active/open */
+.accordion-item.active .accordion-panel {
+    max-height: 500px; /* Set to a value larger than any possible content height */
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+
+/* --------------------------------------------------------------------------
+   7. COUNTDOWN TIMER COMPONENT
+   -------------------------------------------------------------------------- */
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.time-block {
+    background-color: var(--off-white);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 90px;
+}
+
+.time-block .number {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--primary-red);
+    line-height: 1;
+}
+
+.time-block .label {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--professional-gray);
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. HERO SECTION STYLES
+   -------------------------------------------------------------------------- */
+
+/* Main hero section container */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    position: relative; /* Required for absolute positioned children */
+}
+
+/* Background video styling */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Dark overlay for better text readability */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--deep-charcoal);
+    opacity: 0.6;
+    z-index: -1;
+}
+
+/* Hero section main paragraph */
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Responsive hero section */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   9. FEATURES/WHY CHOOSE US SECTION
+   -------------------------------------------------------------------------- */
+
+/* Container for feature items */
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual feature item styling */
+.feature-item {
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Responsive features section */
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .feature-item {
+        max-width: 300px;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   10. DESTINATIONS SECTION
+   -------------------------------------------------------------------------- */
+
+/* Destinations section with off-white background */
+.destinations-section {
+    background-color: var(--off-white);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Grid layout for destination cards */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Responsive destinations grid */
+@media (max-width: 768px) {
+    .destinations-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   11. UTILITY CLASSES
+   -------------------------------------------------------------------------- */
+
+/* Text alignment utilities */
+.text-center {
+    text-align: center;
+}
+
+/* Section heading styling */
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Responsive section heading */
+@media (max-width: 768px) {
+    .section-heading {
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Expired countdown message */
+.countdown-expired {
+    text-align: center;
+    color: var(--professional-gray);
+    font-style: italic;
+}
+
+/* Additional responsive improvements */
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 15px;
+    }
+    
+    .hero-section {
+        padding: 80px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .main-header .logo-container img {
+        height: 50px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .countdown-timer {
+        gap: 10px;
+    }
+    
+    .time-block {
+        min-width: 70px;
+        padding: 15px 10px;
+    }
+    
+    .time-block .number {
+        font-size: 28px;
+    }
+}
